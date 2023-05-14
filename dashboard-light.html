@@ -78,41 +78,41 @@
         </form>
         <div class="new-task5">
           <div class="good-morning-sumeed">Track Time</div>
-          <div class="div16">25:00</div>
+          <div class="div16">00:00</div>
           <div class="frame-parent5">
             <button class="min-wrapper2">
               <div class="min8">
-                <p class="p4">10</p>
+                <p class="p4">5</p>
                 <p class="min9">min</p>
               </div>
             </button>
             <button class="min-wrapper2">
               <div class="min8">
-                <p class="p4">10</p>
+                <p class="p4">15</p>
                 <p class="min9">min</p>
               </div>
             </button>
             <button class="min-wrapper2">
               <div class="min8">
-                <p class="p4">10</p>
+                <p class="p4">25</p>
                 <p class="min9">min</p>
               </div>
             </button>
             <button class="min-wrapper2">
               <div class="min8">
-                <p class="p4">10</p>
+                <p class="p4">45</p>
                 <p class="min9">min</p>
               </div>
             </button>
           </div>
-          <button class="buttons23">
+          <button class="buttons23" id = "timer">
             <img
               class="book-24-outline1"
               alt=""
               src="./public/notes--24--outline2.svg"
             />
 
-            <div class="button23">Save</div>
+            <div class="button23">Start</div>
           </button>
           <div class="tag-parent12">
             <div class="good-morning-sumeed">Tag</div>
@@ -205,6 +205,7 @@
         <div class="notes-group">
           <div class="notes1">Notes</div>
           <div class="note-container">
+
             <div class="note10" id="Note">
               <div class="my-last-night-dream-parent8">
                 <b class="pm-25-march1">Grocery List</b>
@@ -604,9 +605,81 @@
       var frameButton4 = document.getElementById("frameButton4");
       if (frameButton4) {
         frameButton4.addEventListener("click", function (e) {
-          window.location.href = "./dashboard-dark.html";
+          // smoothly animate to nex page
+          document.body.style.opacity = 0;
+          setTimeout(()=> {
+            window.location.href = "./dashboard-dark.html";
+          }, 500);
         });
       }
+
+      // when I click min-wrapper2, I want to update the time in div16 to the value of the button "p4" into div16
+        var timer = document.getElementById("timer");
+        var minWrapper2 = document.getElementsByClassName("min-wrapper2");
+        if (minWrapper2) {
+          for (var i = 0; i < minWrapper2.length; i++) {
+            minWrapper2[i].addEventListener("click", function (e) {
+              var min = this.getElementsByClassName("p4")[0].innerHTML;
+              document.getElementsByClassName("div16")[0].innerHTML = min + ":00";
+              timer.innerHTML = `
+                <img
+                  class="book-24-outline1"
+                  alt=""
+                  src="./public/notes--24--outline2.svg"
+                />
+                <div class="button23">Start</div>
+              `;
+            });
+          }
+          // and then if  button with id "timer" is clicked, I want to start the timer with the time in div16
+          if (timer && document.getElementsByClassName("div16")[0].value != "00:00") {
+            timer.addEventListener("click", function (e) {
+              timer.innerHTML = `
+              <img
+                class="book-24-outline1"
+                alt=""
+                src="./public/notes--24--outline2.svg"
+              />
+              <div class="button23">Stop</div>
+            `;
+            
+              timer.getElementsByClassName("button23")[0].addEventListener("click", function (e) {
+                document.getElementsByClassName("div16")[0].innerHTML = "00:00";
+                // stop timer
+                clearInterval(interval);
+                
+                timer.innerHTML = `
+                <img
+                  class="book-24-outline1"
+                  alt=""
+                  src="./public/notes--24--outline2.svg"
+                />
+                <div class="button23">Start</div>
+              `;
+                
+              });
+
+            
+            var time = document.getElementsByClassName("div16")[0].innerHTML;
+              var timeArr = time.split(":");
+              var min = parseInt(timeArr[0]);
+              var sec = parseInt(timeArr[1]);
+              var totalSec = min * 60 + sec;
+              var interval = setInterval(function () {
+                if (totalSec == 0) {
+                  clearInterval(interval);
+                }
+                var min = Math.floor(totalSec / 60);
+                var sec = totalSec % 60;
+                document.getElementsByClassName("div16")[0].innerHTML =
+                  min + ":" + sec;
+                totalSec--;
+              }, 1000);
+            });
+          }
+        }
+        
+
       </script>
   </body>
 </html>

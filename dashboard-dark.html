@@ -121,30 +121,30 @@
           <div class="frame-parent2">
             <button class="min-wrapper">
               <div class="min">
-                <p class="p">10</p>
+                <p class="p">5</p>
                 <p class="min1">min</p>
               </div>
             </button>
             <button class="min-wrapper">
               <div class="min">
-                <p class="p">10</p>
+                <p class="p">15</p>
                 <p class="min1">min</p>
               </div>
             </button>
             <button class="min-wrapper">
               <div class="min">
-                <p class="p">10</p>
+                <p class="p">25</p>
                 <p class="min1">min</p>
               </div>
             </button>
             <button class="min-wrapper">
               <div class="min">
-                <p class="p">10</p>
+                <p class="p">45</p>
                 <p class="min1">min</p>
               </div>
             </button>
           </div>
-          <button class="buttons20">
+          <button class="buttons20" id="timer">
             <img
               class="book-24-outline"
               alt=""
@@ -160,7 +160,7 @@
         </div>
         <div class="dark-mode-parent2">
           <div class="dark-mode4">Dark Mode</div>
-          <div class="rectangle-wrapper1">
+          <div class="rectangle-wrapper1" id = "frameButton4">
             <div class="instance-child1"></div>
           </div>
         </div>
@@ -645,4 +645,83 @@
       </div>
     </div>
   </body>
+  <script>
+    var frameButton4 = document.getElementById("frameButton4");
+    if (frameButton4) {
+      frameButton4.addEventListener("click", function (e) {
+        // smoothly animate to nex page
+        document.body.style.opacity = 0;
+        setTimeout(()=> {
+          window.location.href = "./dashboard-light.html";
+        }, 500);
+      });
+    }
+
+    // when I click min-wrapper2, I want to update the time in div16 to the value of the button "p4" into div16
+      var timer = document.getElementById("timer");
+      var minWrapper = document.getElementsByClassName("min-wrapper");
+      if (minWrapper) {
+        for (var i = 0; i < minWrapper.length; i++) {
+          minWrapper[i].addEventListener("click", function (e) {
+            var min = this.getElementsByClassName("p")[0].innerHTML;
+            document.getElementsByClassName("div3")[0].innerHTML = min + ":00";
+            timer.innerHTML = `
+              <img
+                class="book-24-outline"
+                alt=""
+                src="./public/notes--24--outline1.svg"
+              />
+              <div class="button20">Start</div>
+            `;
+          });
+        }
+        // and then if  button with id "timer" is clicked, I want to start the timer with the time in div16
+        if (timer && document.getElementsByClassName("div3")[0].value != "00:00") {
+          timer.addEventListener("click", function (e) {
+            timer.innerHTML = `
+            <img
+              class="book-24-outline"
+              alt=""
+              src="./public/notes--24--outline1.svg"
+            />
+            <div class="button20">Stop</div>
+          `;
+          
+            timer.getElementsByClassName("button20")[0].addEventListener("click", function (e) {
+              document.getElementsByClassName("div3")[0].innerHTML = "00:00";
+              // stop timer
+              clearInterval(interval);
+              
+              timer.innerHTML = `
+              <img
+                class="book-24-outline"
+                alt=""
+                src="./public/notes--24--outline1.svg"
+              />
+              <div class="button20">Start</div>
+            `;
+              
+            });
+
+          
+          var time = document.getElementsByClassName("div3")[0].innerHTML;
+            var timeArr = time.split(":");
+            var min = parseInt(timeArr[0]);
+            var sec = parseInt(timeArr[1]);
+            var totalSec = min * 60 + sec;
+            var interval = setInterval(function () {
+              if (totalSec == 0) {
+                clearInterval(interval);
+              }
+              var min = Math.floor(totalSec / 60);
+              var sec = totalSec % 60;
+              document.getElementsByClassName("div3")[0].innerHTML = min + ":" + sec;
+              totalSec--;
+            }, 1000);
+          });
+        }
+      }
+      
+
+    </script>
 </html>

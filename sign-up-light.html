@@ -28,25 +28,21 @@
           <p class="welcome-back1">Login to your Account</p>
         </div>
         <div class="forms-parent3">
-          <input class="forms6" type="email" placeholder="JohnDoe69" required />
-
           <div class="usernameemail3">Username/Email</div>
+          <input class="forms6" type="email" placeholder="name@domain" required />
+
         </div>
         <div class="forms-parent3">
+          <div class="usernameemail3">Password</div>
           <input class="forms7" type="password" placeholder="From" required />
 
-          <div class="usernameemail3">Password</div>
         </div>
         <div class="buttons-parent6">
-          <button class="buttons15" id="buttons">
-            <img
-              class="login-24-outline3"
-              alt=""
-              src="./public/login--24--outline1.svg"
-            />
-
-            <div class="button15">Login</div>
+          <button type="button" class="buttons15" id="login-btn">
+            <img class="login-24-outline3" alt="" src="./public/login--24--outline1.svg" />
+            Login
           </button>
+          
           <div class="forget-password3">Forget Password?</div>
         </div>
         <div class="frame-parent1">
@@ -104,6 +100,24 @@
     </div>
 
     <script>
+      const loginButton = document.getElementById("login-btn");
+
+      loginButton.addEventListener("click", function() {
+        const email = document.querySelector(".forms6").value;
+        const password = document.querySelector(".forms7").value;
+
+        const storedEmail = localStorage.getItem("email");
+        const storedPassword = localStorage.getItem("password");
+
+        if (email === storedEmail && password === storedPassword) {
+          alert("Logged in successfully!");
+          window.location.href = "./dashboard-dark.html";
+        } else {
+          alert("Invalid credentials. Please try again.");
+        }
+
+      });
+
       var buttons = document.getElementById("buttons");
       if (buttons) {
         buttons.addEventListener("click", function (e) {
@@ -121,7 +135,7 @@
       var frameButton = document.getElementById("frameButton");
       if (frameButton) {
         frameButton.addEventListener("click", function (e) {
-          window.location.href = "/";
+          window.location.href = "/sign-up-dark.html";
         });
       }
       

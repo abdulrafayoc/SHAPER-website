@@ -59,7 +59,7 @@
   text-align: left;
   mix-blend-mode: normal;
 }
-.forms-parent1 {
+.forms-parent1,.forms-parent2 {
   position: relative;
   width: 300px;
   height: 56px;

@@ -26,24 +26,24 @@
           <p class="welcome-to-shaper1">Signup!</p>
         </div>
         <div class="forms-parent1">
-          <input class="forms4" type="email" placeholder="JohnDoe69" />
-
           <div class="usernameemail2">Username/Email</div>
-        </div>
-        <div class="forms-parent1">
-          <input class="forms5" type="password" placeholder="From" />
+          <input class="forms4" type="email" placeholder="name@domain" id="emailInput" />
 
+        </div>
+        <div class="forms-parent2">
           <div class="usernameemail2">Password</div>
+          <input class="forms5" type="password" placeholder="From" id="passwordInput" />
+
         </div>
         <div class="buttons-parent3">
-          <button class="buttons10" id="buttons">
+          <button type="button" class="buttons10" id="buttons" onclick="saveCredentials()">
             <img
               class="login-24-outline2"
               alt=""
               src="./public/login--24--outline1.svg"
             />
 
-            <div class="button10">Sign In</div>
+            Sign In
           </button>
           <div class="forget-password2">Forget Password?</div>
         </div>
@@ -103,10 +103,21 @@
     </div>
 
     <script>
+
+      function saveCredentials() {
+        const email = document.getElementById("emailInput").value;
+        const password = document.getElementById("passwordInput").value;
+         
+        localStorage.setItem("email", email);
+        localStorage.setItem("password", password);
+        alert("Credentials saved!");
+      }
+
+
       var buttons = document.getElementById("buttons");
       if (buttons) {
         buttons.addEventListener("click", function (e) {
-          window.location.href = "./dashboard-light.html";
+          window.location.href = "./dashboard-dark.html";
         });
       }
       

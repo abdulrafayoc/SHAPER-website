@@ -73,8 +73,9 @@
   font-weight: 600;
   text-align: center;
   mix-blend-mode: normal;
+  color: white;
 }
-.forms8 {
+.forms8,.forms10,.forms12 {
   border: 1px solid var(--main-colors-light);
   font-family: var(--subtitle);
   font-size: var(--header-5-size);
@@ -90,6 +91,7 @@
   padding: var(--padding-7xs) var(--padding-5xs);
   align-items: flex-start;
   justify-content: flex-start;
+  color: white;
 }
 .from {
   position: relative;
@@ -109,6 +111,7 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  color: white;
 }
 .forms9 {
   flex: 1;
@@ -151,7 +154,7 @@
   text-align: left;
   mix-blend-mode: normal;
 }
-.buttons20 {
+.buttons20,.buttons200 {
   cursor: pointer;
   border: 0;
   padding: var(--padding-3xs) var(--padding-xs);
@@ -168,7 +171,8 @@
   gap: var(--gap-7xs);
 }
 .march-20,
-.tag {
+.tag,.tag1,.tag2,.tage3,.tag4,.tag5 {
+  color: white;
   position: relative;
   letter-spacing: -0.02em;
   font-weight: 600;
@@ -213,6 +217,7 @@
   mix-blend-mode: normal;
 }
 .forms14 {
+  color: white;
   border: 1px solid var(--main-colors-light);
   background-color: transparent;
   font-family: var(--subtitle);
@@ -653,7 +658,7 @@
   align-items: center;
   justify-content: space-between;
 }
-.milk {
+.milk,.description1 {
   margin: 0;
 }
 .my-last-night-container {
@@ -813,6 +818,16 @@
   height: 24px;
   overflow: hidden;
   flex-shrink: 0;
+}
+.taskkk1 {
+  position: relative;
+  mix-blend-mode: normal;
+  color: white;
+}
+.taskkk2 {
+  position: relative;
+  mix-blend-mode: normal;
+  color: white;
 }
 .some-tag,
 .this-is-a {
@@ -1232,6 +1247,16 @@
   font-size: var(--header-4-size);
   color: var(--white);
   font-family: var(--header-5);
+}
+.date1 {
+  position: relative;
+  mix-blend-mode: normal;
+  color: orangered;
+}
+.date2 {
+  position: relative;
+  mix-blend-mode: normal;
+  color: orangered;
 }
 @media screen and (max-width: 960px) {
   .dashboard-dark {

@@ -75,7 +75,7 @@
   mix-blend-mode: normal;
   color: white;
 }
-.forms8,.forms10,.forms12 {
+.forms8,.forms10,.forms12,.forms88 {
   border: 1px solid var(--main-colors-light);
   font-family: var(--subtitle);
   font-size: var(--header-5-size);
@@ -92,6 +92,9 @@
   align-items: flex-start;
   justify-content: flex-start;
   color: white;
+}
+.forms88 {
+  width: 140px;
 }
 .from {
   position: relative;
@@ -113,6 +116,11 @@
   align-items: flex-start;
   color: white;
 }
+.form {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+} 
 .forms9 {
   flex: 1;
   border-radius: var(--br-5xs);

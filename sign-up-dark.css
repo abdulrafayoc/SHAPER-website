@@ -70,6 +70,7 @@
   flex-direction: row;
   padding: var(--padding-7xs) var(--padding-5xs);
   align-items: flex-start;
+  color: white;
   justify-content: flex-start;
 }
 .usernameemail1 {
@@ -104,6 +105,7 @@
   padding: var(--padding-7xs) var(--padding-5xs);
   align-items: flex-start;
   justify-content: space-between;
+  color: white;
 }
 .login-24-outline1 {
   position: relative;

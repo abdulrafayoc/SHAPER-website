@@ -37,39 +37,47 @@
         </nav>
         <form class="new-task3" method="post">
           <div class="create-new-task1">Create new Task</div>
-          <input class="forms15" type="text" />
+          <input class="forms15" type="text" placeholder="add new task"/>
 
           <div class="forms-parent6">
-            <select class="forms16"></select>
-            <select class="forms16"></select>
+            <select class="forms16" id="dropdown-type">
+              <option value="work">Work</option>
+              <option value="personal">Personal</option>
+              <option value="school">School</option>          
+            </select>
+            <select class="forms16">
+              <option value="high-priority">High Priority</option>
+              <option value="medium-priority">Medium Priority</option>
+              <option value="low-priority">Low Priority</option>
+            </select>
           </div>
-          <input class="forms18" type="date" />
+          <input class="forms18" type="text" placeholder="date" />
 
           <input class="forms15" type="text" placeholder="Description" />
 
-          <button class="buttons23">
+          <button type="button" class="buttons23">
             <img
               class="book-24-outline1"
               alt=""
               src="./public/book--24--outline1.svg"
             />
 
-            <div class="button23">Save</div>
+            <div type="button" class="button23">Save</div>
           </button>
         </form>
         <form class="new-task4" method="post">
           <div class="create-new-task1">Create new Note</div>
-          <input class="forms15" type="text" />
+          <input class="new-note" type="text" placeholder="add new note" />
 
-          <textarea class="forms21" placeholder="Body" required> </textarea>
-          <button class="buttons23">
+          <textarea class="new-text" placeholder="Body"> </textarea>
+          <button type="button" class="buttons230">
             <img
               class="book-24-outline1"
               alt=""
               src="./public/notes--24--outline2.svg"
             />
 
-            <div class="button23">Save</div>
+            <div type="button" class="button23">Save</div>
           </button>
           <div class="tag-parent11">
             <div class="tag17">Tag</div>
@@ -128,7 +136,7 @@
       </section>
       <section class="frame-section">
         <div class="good-morning-sumeed-parent">
-          <div class="good-morning-sumeed">Good Morning, Sumeed!</div>
+          <div class="good-morning-sumeed">Good Morning!</div>
           <div class="frame-parent6">
             <div class="calender-24-outline-group">
               <img
@@ -208,107 +216,83 @@
 
             <div class="note10" id="Note">
               <div class="my-last-night-dream-parent8">
-                <b class="pm-25-march1">Grocery List</b>
+                <b class="note1"></b>
                 <div class="tag-parent13">
-                  <div class="dark-mode5">Personal</div>
-                  <div class="march-2019">March 20</div>
+                  <div class="dark-mode5"></div>
+                  <div class="march-2019"></div>
                 </div>
               </div>
               <div class="my-last-night-container6">
-                <ul class="milk-eggs-bread-cheese">
-                  <li class="milk1">Milk</li>
-                  <li class="milk1">Eggs</li>
-                  <li class="milk1">Bread</li>
-                  <li>Cheese</li>
-                </ul>
+                <p class="text1"></p>
               </div>
             </div>
             <div class="note10" id="Note">
               <div class="my-last-night-dream-parent8">
-                <div class="good-morning-sumeed">Recipe</div>
+                <div class="note2"></div>
                 <div class="tag-parent13">
-                  <div class="dark-mode5">Personal</div>
-                  <div class="march-2019">March 22</div>
+                  <div class="dark-mode5"></div>
+                  <div class="march-2019"></div>
                 </div>
               </div>
               <div class="my-last-night-container6">
-                <ul class="milk-eggs-bread-cheese">
-                  <li class="milk1">Chicken parmesan</li>
-                  <li class="milk1">Ingredients:</li>
-                  <li class="milk1">Chicken breasts</li>
-                  <li class="milk1">Tomato sauce</li>
-                  <li class="milk1">Mozzarella cheese</li>
-                  <li class="milk1">Parmesan cheese</li>
-                  <li>Bread crumbs</li>
-                </ul>
+                <p class="text2"></p>
               </div>
             </div>
             <div class="note10" id="Note">
               <div class="my-last-night-dream-parent8">
-                <div class="good-morning-sumeed">Passwords</div>
+                <div class="note3"></div>
                 <div class="tag-parent13">
-                  <div class="dark-mode5">Personal</div>
-                  <div class="march-2019">March 24</div>
+                  <div class="dark-mode5"></div>
+                  <div class="march-2019"></div>
                 </div>
               </div>
               <div class="my-last-night-container6">
-                <ul class="milk-eggs-bread-cheese">
-                  <li class="milk1">Facebook: ********</li>
-                  <li class="milk1">Gmail: ********</li>
-                  <li>Amazon: ********</li>
-                </ul>
+                <p class="text3"></p>
               </div>
             </div>
             <div class="note10" id="Note">
               <div class="my-last-night-dream-parent8">
-                <div class="good-morning-sumeed">My last Night dream</div>
+                <div class="note4"></div>
                 <div class="tag-parent13">
-                  <div class="dark-mode5">Tag</div>
-                  <div class="march-2019">March 20</div>
+                  <div class="dark-mode5"></div>
+                  <div class="march-2019"></div>
                 </div>
               </div>
               <div class="my-last-night18">
-                My last Night dream My last Night dream My last Night dream My
-                last Night dream My last Night dream My last Night dream
+                <p class="text4"></p>
               </div>
             </div>
             <div class="note10" id="Note">
               <div class="my-last-night-dream-parent8">
-                <div class="good-morning-sumeed">My last Night dream</div>
+                <div class="good-morning-sumeed"></div>
                 <div class="tag-parent13">
-                  <div class="dark-mode5">Tag</div>
-                  <div class="march-2019">March 20</div>
+                  <div class="dark-mode5"></div>
+                  <div class="march-2019"></div>
                 </div>
               </div>
               <div class="my-last-night18">
-                My last Night dream My last Night dream My last Night dream My
-                last Night dream My last Night dream My last Night dream
               </div>
             </div>
             <div class="note10" id="Note">
               <div class="my-last-night-dream-parent8">
-                <div class="good-morning-sumeed">My last Night dream</div>
+                <div class="good-morning-sumeed"></div>
                 <div class="tag-parent13">
-                  <div class="dark-mode5">Tag</div>
-                  <div class="march-2019">March 20</div>
+                  <div class="dark-mode5"></div>
+                  <div class="march-2019"></div>
                 </div>
               </div>
               <div class="my-last-night22">
-                My last Night dream My last Night dream My last Night dream My
-                last Night dream My last Night dream My last Night dream
               </div>
             </div>
             <div class="note10">
               <div class="my-last-night-dream-parent8">
-                <div class="good-morning-sumeed">My last Night dream</div>
+                <div class="good-morning-sumeed"></div>
                 <div class="tag-parent13">
-                  <div class="dark-mode5">Tag</div>
+                  <div class="dark-mode5"></div>
                   <div class="march-2019">March 20</div>
                 </div>
               </div>
               <div class="my-last-night18">
-                My last Night dream My last Night dream My last Night dream My
-                last Night dream My last Night dream My last Night dream
               </div>
             </div>
           </div>
@@ -371,10 +355,10 @@
               <img class="check-icon1" alt="" src="./public/check1.svg" />
 
               <div class="this-is-a-task-parent8">
-                <div class="this-is-a10">Do Exercise</div>
+                <div class="new-task1">Do Exercise</div>
                 <div class="march-23-parent9">
-                  <div class="days4">March 23</div>
-                  <div class="some-tag11">Personal</div>
+                  <div class="new-date1">March 23</div>
+                  <div class="type1">Personal</div>
                 </div>
               </div>
             </div>
@@ -382,10 +366,10 @@
               <img class="check-icon1" alt="" src="./public/check1.svg" />
 
               <div class="this-is-a-task-parent8">
-                <div class="this-is-a10">Respond to Emails</div>
+                <div class="new-task2">Respond to Emails</div>
                 <div class="march-23-parent9">
-                  <div class="days4">March 23</div>
-                  <div class="some-tag12">Work</div>
+                  <div class="new-date2">March 23</div>
+                  <div class="type2">Work</div>
                 </div>
               </div>
             </div>
@@ -601,85 +585,6 @@
       </section>
     </main>
 
-    <script>
-      var frameButton4 = document.getElementById("frameButton4");
-      if (frameButton4) {
-        frameButton4.addEventListener("click", function (e) {
-          // smoothly animate to nex page
-          document.body.style.opacity = 0;
-          setTimeout(()=> {
-            window.location.href = "./dashboard-dark.html";
-          }, 500);
-        });
-      }
-
-      // when I click min-wrapper2, I want to update the time in div16 to the value of the button "p4" into div16
-        var timer = document.getElementById("timer");
-        var minWrapper2 = document.getElementsByClassName("min-wrapper2");
-        if (minWrapper2) {
-          for (var i = 0; i < minWrapper2.length; i++) {
-            minWrapper2[i].addEventListener("click", function (e) {
-              var min = this.getElementsByClassName("p4")[0].innerHTML;
-              document.getElementsByClassName("div16")[0].innerHTML = min + ":00";
-              timer.innerHTML = `
-                <img
-                  class="book-24-outline1"
-                  alt=""
-                  src="./public/notes--24--outline2.svg"
-                />
-                <div class="button23">Start</div>
-              `;
-            });
-          }
-          // and then if  button with id "timer" is clicked, I want to start the timer with the time in div16
-          if (timer && document.getElementsByClassName("div16")[0].value != "00:00") {
-            timer.addEventListener("click", function (e) {
-              timer.innerHTML = `
-              <img
-                class="book-24-outline1"
-                alt=""
-                src="./public/notes--24--outline2.svg"
-              />
-              <div class="button23">Stop</div>
-            `;
-            
-              timer.getElementsByClassName("button23")[0].addEventListener("click", function (e) {
-                document.getElementsByClassName("div16")[0].innerHTML = "00:00";
-                // stop timer
-                clearInterval(interval);
-                
-                timer.innerHTML = `
-                <img
-                  class="book-24-outline1"
-                  alt=""
-                  src="./public/notes--24--outline2.svg"
-                />
-                <div class="button23">Start</div>
-              `;
-                
-              });
-
-            
-            var time = document.getElementsByClassName("div16")[0].innerHTML;
-              var timeArr = time.split(":");
-              var min = parseInt(timeArr[0]);
-              var sec = parseInt(timeArr[1]);
-              var totalSec = min * 60 + sec;
-              var interval = setInterval(function () {
-                if (totalSec == 0) {
-                  clearInterval(interval);
-                }
-                var min = Math.floor(totalSec / 60);
-                var sec = totalSec % 60;
-                document.getElementsByClassName("div16")[0].innerHTML =
-                  min + ":" + sec;
-                totalSec--;
-              }, 1000);
-            });
-          }
-        }
-        
-
-      </script>
+    <script src="dashboard-light.js"></script>
   </body>
 </html>

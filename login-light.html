@@ -103,23 +103,48 @@
     </div>
 
     <script>
-
+      
       function saveCredentials() {
-        const email = document.getElementById("emailInput").value;
-        const password = document.getElementById("passwordInput").value;
-         
+        
+        // no credentials
+      }
+      
+      
+      var buttons = document.getElementById("buttons");
+      buttons.addEventListener("click", function () {
+        var email = document.getElementById("emailInput").value;
+        var password = document.getElementById("passwordInput").value;
+
+        // check if email is already registred
+        if (localStorage.getItem("email") === email) {
+          alert("Already Exists! redirecting to Login Page.");
+          window.location.href = "./sign-up-light.html";
+          return;
+        }
+
+        
+
+        if (password.length < 8) {
+          alert("Password must be at least 8 characters long!");
+          return;
+        }
+        if (email.length < 1) {
+          alert("Email cannot be empty!");
+          return;
+        }
+        if (email.indexOf("@") < 0) {
+          alert("Email must contain @!");
+          return;
+        }
+        if (password.indexOf(" ") >= 0) {
+          alert("Password cannot contain spaces!");
+          return;
+        }
         localStorage.setItem("email", email);
         localStorage.setItem("password", password);
         alert("Credentials saved!");
-      }
-
-
-      var buttons = document.getElementById("buttons");
-      if (buttons) {
-        buttons.addEventListener("click", function (e) {
-          window.location.href = "./dashboard-dark.html";
-        });
-      }
+        window.location.href = "./dashboard-dark.html";
+      });
       
       var alreadyHaveAn = document.getElementById("alreadyHaveAn");
       if (alreadyHaveAn) {

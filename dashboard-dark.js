@@ -1,6 +1,7 @@
 // Get the button element
 var button = document.querySelector('.buttons20');
 var button1 = document.querySelector('.buttons200');
+var button2 = document.querySelector('.rectangle-wrapper1');
 
 // Get the input elements
 var taskInput = document.querySelector('.forms8');
@@ -67,6 +68,11 @@ button1.addEventListener('click', function() {
   text.value = '';
 });
 
+button2.addEventListener('click', function() {
+
+  window.location.href = "./dashboard-light.html";
+
+});
 
 
 /////////////////////////////////////////////////////////////////////////

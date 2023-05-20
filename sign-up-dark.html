@@ -33,12 +33,12 @@
           <div class="usernameemail1">Username/Email</div>
         </div>
         <div class="forms-container">
-          <input class="forms3" type="text" placeholder="From" />
+          <input class="forms3" type="password" placeholder="From" />
 
           <div class="usernameemail1">Password</div>
         </div>
         <div class="frame-div">
-          <button class="buttons5" id="buttons">
+          <button type = "button" class="buttons5" id="buttons">
             <img
               class="login-24-outline1"
               alt=""
@@ -105,11 +105,27 @@
 
     <script>
       var buttons = document.getElementById("buttons");
-      if (buttons) {
-        buttons.addEventListener("click", function (e) {
+      // if (buttons) {
+      //   buttons.addEventListener("click", function (e) {
+      //     window.location.href = "./dashboard-dark.html";
+      //   });
+      // }
+
+      buttons.addEventListener("click", function() {
+        const email = document.querySelector(".forms2").value;
+        const password = document.querySelector(".forms3").value;
+
+        const storedEmail = localStorage.getItem("email");
+        const storedPassword = localStorage.getItem("password");
+
+        if (email === storedEmail && password === storedPassword) {
+          alert("Logged in successfully!");
           window.location.href = "./dashboard-dark.html";
-        });
-      }
+        } else {
+          alert("Invalid credentials. Please try again.");
+        }
+
+      });
       
       var dontHaveAn = document.getElementById("dontHaveAn");
       if (dontHaveAn) {

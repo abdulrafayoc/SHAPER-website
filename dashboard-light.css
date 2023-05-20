@@ -61,7 +61,7 @@
   text-align: left;
   mix-blend-mode: normal;
 }
-.forms15 {
+.forms15,.new-note {
   border: 1px solid var(--main-colors-main);
   font-family: var(--subtitle);
   font-size: var(--header-5-size);
@@ -123,7 +123,7 @@
   text-align: left;
   mix-blend-mode: normal;
 }
-.buttons23 {
+.buttons23,.buttons230 {
   cursor: pointer;
   border: 0;
   padding: var(--padding-3xs) var(--padding-xs);
@@ -139,7 +139,9 @@
 }
 .buttons23,
 .forms21,
-.new-task3 {
+.new-task3,
+.buttons230,
+.new-text {
   box-sizing: border-box;
   display: flex;
 }
@@ -157,7 +159,7 @@
   justify-content: center;
   gap: var(--gap-5xs);
 }
-.forms21 {
+.forms21,.new-text {
   border: 1px solid var(--main-colors-main);
   background-color: transparent;
   font-family: var(--subtitle);
